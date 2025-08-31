@@ -1,0 +1,156 @@
+.navbar-nav .nav-link {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0.6);
+
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #000;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.navbar-brand img {
+    height: 50px;
+    /* Logo Height */
+    display: block;
+}
+
+.navbar {
+    color: #ffffff;
+    position: relative;
+}
+
+.navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+@media (max-width: 920px) {
+    .login-link {
+        display: none;
+        /* "LOG IN" ko hide kar diya */
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 10px;
+        /* Logo ko left align kar diya */
+    top :0px;
+        transform: translateY(-50%);
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
+        /* Navbar toggler (3 dots) ko right side kar diya */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbar .navbar-brand {
+        position: absolute;
+        left: 10%;
+        transform: translateX(-50%);
+    }
+    .icone{
+         margin-left:  -10rem;
+    }
+
+    
+
+}
+.size-box {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+
+}.size-box.active {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.active-size {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+#productRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 20px;
+}
+
+/* Image Fix */
+.tshirt-img {
+    width: 100%;  /* Image full width par set hogi */
+    height: auto; /* Original aspect ratio maintain karegi */
+    object-fit: cover;
+}
+
+/* Tablet View (Max 768px) - 3 Columns */
+@media (max-width: 768px) {
+    #productRow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile View (Max 544px) - 2 Columns */
+@media (max-width: 544px) {
+    #productRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.mobile-offcanvas {
+    width: 90% !important; /* Fullscreen width */
+
+}
+
+.mobile-offcanvas .offcanvas-body {
+    padding: 10px;
+}
+
+.mobile-offcanvas .navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+.navbar-nav-item {
+    background-color: rgba(255, 245, 245, 1); /* Light pink background */
+}
+@media (max-width: 950px) {
+    .fa-search {
+      display: none !important;
+    }.icone{
+        display: none !important;
+    }
+    .login-link{
+         display: none ! important;
+    }
+  }
+  

@@ -1,0 +1,181 @@
+.body{
+    font-family: sans-serif;
+}
+
+.navbar-nav .nav-link {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: rgb(0,0,0.6);
+   
+}
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+}
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #000;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+.navbar-brand img {
+    height: 50px; /* Logo Height */
+    display: block;
+}
+.navbar {
+    color:#ffffff;
+    position: relative;
+}
+.navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+.hero-section {
+    background-color: #faedeb; /* Light Pink Background */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero-content {
+    padding-left: 5%;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+}
+.hero-content p {
+    font-size: 1rem;
+    color: #666;
+}
+.hero-btn {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.hero-btn:hover {
+    background: #333;
+}
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-img {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    z-index: 0; /* Back */
+}
+.girl-img {
+    position: relative;
+    max-width: 650px;
+    z-index: 1; /* Front */
+}
+@media (max-width: 992px) {
+    .hero-content {
+        text-align: center;
+        padding: 50px;
+    }
+    .hero-image {
+        margin-top: 20px;
+    }
+}
+
+
+
+.size-box {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.size-box.active {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+
+
+/* middle section css */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.icon-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+}
+.icon-overlay a {
+    background: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.icon-overlay a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+.color-options span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.color-options span:hover {
+    border: 1px solid #000;
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.product-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+.container {
+    margin: 0 20px;
+}

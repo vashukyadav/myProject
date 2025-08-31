@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        a {
+            margin: 15px;
+            color: antiquewhite;
+
+        }
+
+
+
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background: #f4f4f4;
+            padding: 15px;
+
+        }
+
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+
+        }
+
+
+        .newdiv {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .newdiv {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        @media (max-width: 768px) {
+            .newdiv {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Logo</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="multi-div">
+                    <div class="div"><img src="product-01-d-300x366.jpg" alt=""></div>
+                    <div class="div"><img src="product-001-b-300x366.jpg" alt=""></div>
+
+                </div>
+            </aside>
+            <section class="content">
+                <div class="newdiv">
+                    <div class="">
+                        <div class="div"><img src="product-09-a-300x366.jpg" alt=""></div>
+                    </div>
+                    <div>
+                        <div class="div"><img src="product-08-a-300x366.jpg" alt=""></div>
+                    </div>
+                    <div class="">
+                        <div class="div"><img src="product-08-a-300x366.jpg" alt=""></div>
+                    </div>
+                    <div>
+                        <div class="div"><img src="product-09-a-300x366.jpg" alt=""></div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer>
+            2025 My Website is the clothes shop
+        </footer>
+    </div>
+</body>
+
+</html>

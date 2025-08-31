@@ -1,0 +1,105 @@
+/* new css */
+.testimonial-section {
+  background-image: url("/Media/Pub_Bg_02.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+}
+.menu-heading {
+  color: #a21caf; /* Highlighted color for category titles */
+}
+
+
+/* Header Section Styling */
+.header-section {
+  background-image: url("/Media/contact-bg.jpg"); /* Yaha apni image ka path daalein */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Full viewport height */
+  position: relative;
+}
+
+/* Dark Overlay */
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+/* Text Style */
+.header-section .container {
+  z-index: 2; /* Text ko overlay ke upar display karega */
+}
+
+.header-section-second {
+  background-image: url("/Media/menus-bg.jpg"); /* Yaha apni image ka path daalein */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Full viewport height */
+  position: relative;
+}
+
+/* Dark Overlay */
+.header-section-second::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+/* Text Style */
+.header-section-second .container {
+  z-index: 2; /* Text ko overlay ke upar display karega */
+}
+
+.header-section-about {
+  background-image: url("/Media/about-bg.jpg"); /* Yaha apni image ka path daalein */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Full viewport height */
+  position: relative;
+}
+
+.all-in-one {
+  position: relative;
+  background: url('/Media/Pub_Bg_03.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  height: 26rem;
+  z-index: 1;
+}
+
+.all-in-one::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637); /* Black color with 50% opacity */
+  z-index: -1;
+}
+

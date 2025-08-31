@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T-Shirts Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="newcss.css">
+</head>
+
+
+
+<body class="mx-5">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 m-0 p-0">
+        <div class="container-fluid">
+            <!-- Navbar Toggler (3 dots on right side) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="index2.html">
+                <img width="119" height="54"
+                    src="https://websitedemos.net/t-shirts-store-04/wp-content/uploads/sites/1115/2022/07/logo-regular.png"
+                    class="custom-logo" alt="T-Shirts Store" decoding="async" />
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="shop.html">BUY T-SHIRTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="men.html">MEN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Side Menu -->
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link login-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <span class="nav-link mx-3 icone" id="cart-total">$0.00</span>
+                </li>
+                <li class="nav-item position-relative icone">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item login-link d-none d-md-block">
+                    <a class="nav-link mx-3" href="#">LOG IN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 🔹 Offcanvas Menu (Ye Navbar Ke Baad Add Karna Hai) -->
+    <!-- 🔹 Offcanvas Menu (Navbar ke liye Custom Class: mobile-offcanvas) -->
+    <div class="offcanvas offcanvas-start mobile-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav ">
+                <li class="nav-item  navbar-nav-item"><a class="nav-link" href="shop.html">BUY T-SHIRTS</a></li>
+                <li class="nav-item  navbar-nav-item"><a class="nav-link" href="women.html">WOMEN</a></li>
+                <li class="nav-item  navbar-nav-item"><a class="nav-link" href="men.html">MEN</a></li>
+                <li class="nav-item  navbar-nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                <li class="nav-item  navbar-nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 🛒 Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="cart-items">
+                <p class="text-center">No products in the cart.</p>
+            </div>
+            <div class="mt-3 border-top pt-3">
+                <p class="text-end fw-bold">Subtotal: $<span id="subtotal">0.00</span></p>
+                <button class="btn btn-dark w-100">View Cart</button>
+                <button class="btn btn-success w-100 mt-2">Checkout</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <section class="container-fluid vh-75   hero-section d-flex align-items-center mt-5 mb-5 "
+        style="background-color: #FAEDEB;">
+        <div class="container "> <!-- Container ko left-right se padding di -->
+            <div class="row align-items-center">
+                <!-- Left Side: Text -->
+                <div class="col-lg-6 col-md-12 text-center text-lg-start mb-5">
+                    <p class="text-muted">Women</p>
+                    <h1 class="display-4 fw-bold">Slick. Modern. Awesome.</h1>
+                    <button class="btn btn-dark text-uppercase px-4 py-2">Shop Collection</button>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="col-lg-6 col-md-12 text-center position-relative">
+                    <!-- Background Circle Shape -->
+                    <img src="hero-bg.png" alt="Background Shape"
+                        class="position-absolute top-50 start-50 translate-middle w-75" style="z-index: 0;">
+
+                    <!-- Main Image (Girl) -->
+                    <img src="hero.png" alt="Girl" class="img-fluid position-relative z-index-1" style="height: 70%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <h6 class="text-center">Summer Collection</h6>
+        <h2 class="text-center">Popular T-Shirts</h2>
+        <div class="row">
+            <!-- First Product -->
+            <div class="col-md-3">
+                <a href="first_img.html">
+                    <img class="tshirt-img" src="product-09-a-300x366.jpg" alt="T-Shirt" class="img-fluid">
+                </a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Second Product -->
+            <div class="col-md-3">
+                <a href="second-img.html"><img class="tshirt-img" src="product-06-a-300x366.jpg" alt="T-Shirt"
+                        class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Third Product -->
+            <div class="col-md-3">
+                <a href="third-img.html">
+
+
+                    <img class="tshirt-img" src="product-10-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Fourth Product -->
+            <div class="col-md-3"><a href="fourth-img.html">
+
+
+                    <img class="tshirt-img" src="product-08-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="collection-02.jpg" class="img-fluid" alt="T-Shirt">
+                <p class="text-uppercase text-muted mt-3">Men</p>
+                <h2 class="mt-3">The base collection – Ideal every day.</h2>
+                <button class="btn btn-dark mb-5">Shop Now</button>
+            </div>
+            <div class="col-md-6">
+                <img src="collection-01.jpg" class="img-fluid" alt="T-Shirt">
+            </div>
+        </div>
+    </div>
+    <!-- adding new  -->
+
+    <div class="bg position-relative">
+        <div class="overlay"></div>
+        <div class="content">
+            <h5 class="text-uppercase text-muted mb-2">New Collection</h5>
+            <h1 class="display-4 fw bold">Be diffrent in your own way!</h1>
+            <p class="lead">Find your unique style.</p>
+            <a href="#" class="btn btn-dark btn-lg mt-3">Shop Collection</a>
+        </div>
+    </div>
+    <div class="container-fluid half-colored-div">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="collection-03.jpg" alt="Spring Summer Collection" class="img-fluid collection-image">
+                </div>
+                <!-- Right Side Content -->
+                <div class="col-lg-6 text-content">
+                    <p style="font-size: 14px; color: gray;">Women</p>
+                    <h2 style="font-weight: bold;">Spring Summer Collection</h2>
+                    <p style="color: gray; font-size: 16px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id leo tempor, congue justo at,
+                        lobortis orci.
+                        Aliquam venenatis dui lectus, eu convallis turpis convallis et. Pellentesque.
+                    </p>
+                    <button class="btn btn-dark px-4 py-2">See Whole Collection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <h6 class="text-center">Summer Collection</h6>
+        <h2 class="text-center">On Sale T-Shirts</h2>
+        <div class="row">
+            <!-- First Product -->
+            <div class="col-md-3">
+                <a href="fivth-img.html">
+                    <img class="tshirt-img" src="product-01-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border"
+                            style="width: 20px; height: 20px; background-color: pink; color:pink"></div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Second Product -->
+            <div class="col-md-3">
+                <a href="sicx-img.html">
+
+                    <img class="tshirt-img" src="product-05-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Third Product -->
+            <div class="col-md-3">
+                <a href="seven-img.html">
+
+
+                    <img class="tshirt-img" src="product-03-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+
+            <!-- Fourth Product -->
+            <div class="col-md-3">
+                <a href="eight-img.html">
+
+
+                    <img class="tshirt-img" src="product-08-a-300x366.jpg" alt="T-Shirt" class="img-fluid"></a>
+                <p class="text-muted">MEN</p>
+                <p class="fw-bold">T-Shirt Name 10</p>
+                <p class="price fw-semibold">$34.00</p>
+
+                <!-- Color Options -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark color-btn" data-img="product-001-b-300x366.jpg"
+                        data-price="$34.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: black;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-secondary color-btn" data-img="product-01-d-300x366.jpg"
+                        data-price="$30.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: white;">
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-danger color-btn" data-img="product-01-c-300x366.jpg"
+                        data-price="$28.00">
+                        <div class="rounded-circle border" style="width: 20px; height: 20px; background-color: pink;">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="d-flex mt-3 gap-2">
+                    <div class="border size-box" data-size="XS" data-price="$34.00">XS</div>
+                    <div class="border size-box" data-size="S" data-price="$34.00">S</div>
+                    <div class="border size-box" data-size="M" data-price="$34.00">M</div>
+                    <div class="border size-box" data-size="L" data-price="$34.00">L</div>
+                    <div class="border size-box" data-size="XL" data-price="$34.00">XL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-5">
+        <h2>Reviews</h2>
+        <p>
+            <a href="#" class="fw-bold text-black">
+                Very good quality T-shirts and lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut <br> labore et dolore magna aliqua quis ipsum!
+            </a>
+        </p>
+        <div class="text-warning mb-2">
+            ★★★★☆
+        </div>
+        <p>Jane Oliver</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <img src="cat-men-300x300.jpg" class="card-img-top" alt="Men's T-Shirt">
+                    <div class="card-img-overlay d-flex align-items-end justify-content-center">
+                        <div class="text-center w-100 bg-white">
+                            <p class="fw-bold mb-0">MEN</p>
+                            <a href="men.html">
+                                <p class="text-muted small">5 PRODUCTS</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <img src="cat-women-300x300.jpg" class="card-img-top" alt="Women's T-Shirt">
+                    <div class="card-img-overlay d-flex align-items-end justify-content-center">
+                        <div class="text-center w-100 bg-white">
+                            <p class="fw-bold mb-0">WOMEN</p>
+                            <a href="women.html">
+                                <p class="text-muted small">5 PRODUCTS</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-5">
+        <!-- Light Pink Section -->
+        <div class="footer-light text-center">
+            <h5 class="fw-bold">Subscribe To Get Offers In Your Inbox</h5>
+            <p class="text-muted">Lorem ipsum dolor sit amet, adipiscing elit sed do eiusmod condimentum</p>
+
+            <!-- Navigation Links -->
+            <div class="d-flex justify-content-center footer-links gap-3 my-3">
+                <a href="#" class="text-dark text-decoration-none">Buy T-Shirts</a>
+                <a href="#" class="text-dark text-decoration-none">Women</a>
+                <a href="#" class="text-dark text-decoration-none">Men</a>
+                <a href="#" class="text-dark text-decoration-none">About</a>
+                <a href="#" class="text-dark text-decoration-none">Contact</a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="d-flex justify-content-center footer-icons gap-2">
+                <button class="btn btn-light border">
+                    <i class="bi bi-facebook"></i>
+                </button>
+                <button class="btn btn-light border">
+                    <i class="bi bi-twitter"></i>
+                </button>
+                <button class="btn btn-light border">
+                    <i class="bi bi-instagram"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Black Copyright Section -->
+        <div class="footer-dark text-center text-white">
+            <small>Copyright © 2025 T-Shirts Store | Powered by T-Shirts Store</small>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
